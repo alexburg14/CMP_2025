@@ -1,0 +1,20 @@
+mkdir CMP
+cd CMP
+mkdir exercise1.txt
+touch file1.txt
+cp file1.txt  file2.txt
+mv  file2.txt copy1.txt
+cd ..
+ls exercise1
+cd CMP
+man rm
+find . -name *1*
+./exercise1.txt
+grep "exercise1" ./exercise.txt
+exercise1.txt: input file is also the output
+
+# Task 14
+#!/bin/bash
+for i in {1..10}; do
+	mkdir "subdirectory$i"
+done
