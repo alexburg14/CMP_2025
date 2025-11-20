@@ -1,0 +1,6 @@
+&bands
+   prefix = 'diamond',
+   outdir = './output/',
+   filband = 'bands.dat',
+   lsym = .true.
+/
