@@ -1,7 +1,0 @@
-&dos
-   prefix = 'diamond',
-   outdir = './output/',
-   fildos='diamond.dos',
-   emin=-10.0,
-   emax=25.0
-/
