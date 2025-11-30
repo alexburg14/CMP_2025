@@ -1,0 +1,32 @@
+&control
+   calculation = 'relax'		!perform self-consistent calculation
+   prefix='hydrogen_molecule',
+   ! this is a comment: you can comment out variables
+   pseudo_dir = './pseudo/',	!directory where pseudopotentials are found
+   outdir='output/'		!directory to store (temporary) output
+   ! set pseudo_dir and outdir to suitable directories
+/
+
+&system    
+   ibrav=  1,		!SC laticce 
+   celldm(1) =20, 	!lattice constant (in Bohr radii)
+   nat=  2, 		!unit cell contains 2 atom (Hydrogen molecule)
+   ntyp= 1,		!only one type of atoms is simulated (carbon)
+   ecutwfc = 50.0,	!energy cut-off for the plane waves (in Ry)
+   nbnd = 6, 		!number of bands (Kohn-Sham states) used in the calculation
+   occupations='smearing',
+   smearing='gaussian',
+   degauss= 0.01
+/
+
+&electrons
+/
+
+ATOMIC_SPECIES
+ H 1.00 H.upf	!atomic species, mass, and pseudopotential
+ATOMIC_POSITIONS angstrom	!Hydrogen: one atom at (0,0,0)sa
+ H 0.00 0.00 0.00 
+ H DIST 0.00 0.00     !DIST is just a placeholder
+K_POINTS tpiba_b
+ 1
+ 0.00  0.00  0.00  1   ! Γ
