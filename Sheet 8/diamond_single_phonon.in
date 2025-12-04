@@ -1,0 +1,10 @@
+&INPUTPH
+  prefix   = 'diamond'      ! Must match your scf prefix [cite: 17]
+  outdir   = './output'        ! Must match your scf outdir [cite: 16]
+  amass(1) = 12.0107        ! Mass of Carbon [cite: 21]
+  ldisp    = .true.         ! calculate phonons on a grid [cite: 19]
+  nq1=4
+  nq2=4
+  nq3=4       ! The q-point grid dimensions [cite: 22, 23, 24]
+  fildyn   = 'diamond.dyn'  ! File to write dynamical matrices [cite: 25]
+/

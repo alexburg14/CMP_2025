@@ -1,0 +1,5 @@
+&INPUT
+  fildyn = 'diamond.dyn'    ! Must match fildyn from step 2 [cite: 30]
+  zasr   = 'no'             ! Acoustic Sum Rule [cite: 34]
+  flfrc  = 'diamond.fc'     ! Output file for Force Constants [cite: 35]
+/

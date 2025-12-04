@@ -1,0 +1,10 @@
+&INPUT
+  asr            = 'no'           ! Acoustic Sum Rule (see question below) 
+  amass(1)       = 12.0107        ! Mass of Carbon [cite: 43]
+  flfrc          = 'diamond.fc'   ! Input force constants from step 3 [cite: 44]
+  flfrq          = 'diamond.freq' ! Output file for frequencies
+  q_in_band_form = .true.         ! Calculate bands for plotting [cite: 47]
+/
+2                                 ! Number of high-symmetry points in path
+0.000000 0.000000 0.000000 20     ! Gamma point, 20 steps 
+0.000000 1.000000 0.000000 20     ! Endpoint (Likely X), 20 steps
