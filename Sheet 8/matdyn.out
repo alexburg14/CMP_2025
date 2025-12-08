@@ -1,5 +1,5 @@
 
-     Program MATDYN v.7.3.1 starts on  4Dec2025 at 14:28:43 
+     Program MATDYN v.7.3.1 starts on  8Dec2025 at 10:29: 4 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -13,13 +13,13 @@
      Parallel version (MPI), running on     1 processors
 
      MPI processes distributed on     1 nodes
-     287 MiB available memory on the printing compute node when the environment starts
+     602 MiB available memory on the printing compute node when the environment starts
 
 
-     MATDYN       :      0.00s CPU      0.02s WALL
+     MATDYN       :   3m41.83s CPU   3m59.54s WALL
 
 
-   This run was terminated on:  14:28:43   4Dec2025            
+   This run was terminated on:  10:33: 3   8Dec2025            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
