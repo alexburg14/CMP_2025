@@ -1,0 +1,24 @@
+
+units		metal    # sets the type of units you want to use. Metal gives you grams/mole for mass for example
+
+boundary	p p p    # sets the style of boundaries. P means periodic, so its periodic in all directions here.
+
+atom_style      atomic   # defines the type of information you give on the atom to the software. Atomic means you give the tag, type, x, v, f, image, mask
+
+read_data       Si.atoms
+
+pair_style      tersoff  # defines the style of pairwise interaction. Here its the Tersoff Potential.
+pair_coeff      * * SiCGe.tersoff  Si(C) # Speciies the pairwise force field coefficients for one or more pairs of atom type
+
+neighbor	0.3 bin # sets the amount of neighbors you include in your neighbor list, and is calculated by energy_cutoff+neighbor. Bin means you make the list per binning.
+
+fix 1 all nve   #fixes an operation to the atoms. nve means constant time integration
+  
+thermo 10      #output thermodynamics every N timesteps
+thermo_style custom step vol press temp pe ke etotal #sets the style for printing the thermodynamic data in the logs.
+dump traj all custom 10 Trajectory.lammps x y z    # dump the trajectory of all atoms every 10 steps into that file.
+
+timestep 0.001
+run 10000
+
+write_data final.dat
