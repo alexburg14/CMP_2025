@@ -7,13 +7,17 @@ atom_style      atomic   # defines the type of information you give on the atom 
 
 read_data       Si.atoms
 
+
+replicate   4 4 4
+
+
 pair_style      tersoff  # defines the style of pairwise interaction. Here its the Tersoff Potential.
 pair_coeff      * * SiCGe.tersoff  Si(C) # Speciies the pairwise force field coefficients for one or more pairs of atom type
 
 neighbor	0.3 bin # sets the amount of neighbors you include in your neighbor list, and is calculated by energy_cutoff+neighbor. Bin means you make the list per binning.
 
-fix 1 all box/relax iso 0.0 vmax 0.001
-  
+fix 1 all nvt temp 300.0 300.0 0.1
+
 thermo 10      #output thermodynamics every N timesteps
 thermo_style custom step vol press temp pe ke etotal #sets the style for printing the thermodynamic data in the logs.
 dump traj all custom 10 Trajectory.lammps x y z    # dump the trajectory of all atoms every 10 steps into that file.
